@@ -20,9 +20,10 @@ p, h1 {
   }}();
 </script>
  <script>
-   $("#submitForm").click(function() {
-      alert("Thanks for signing up!");
-   });
+  function show_alert() {
+        alert("Thanks for signing up!");
+
+  }
 </script>
  </head> 
  
@@ -63,7 +64,7 @@ p, h1 {
     </div>
   </fieldset>
  
-  <button type="submit" class="btn btn-primary"  value="submit" id="submitForm">Submit</button>
+  <button type="submit" class="btn btn-primary"  value="submit"  onclick="show_alert();">Submit</button>
 </form>
   </div>
  
