@@ -19,6 +19,11 @@ p, h1 {
   analytics.page();
   }}();
 </script>
+ <script>
+   $("#submitForm").click(function() {
+      alert("Thanks for signing up!");
+   });
+</script>
  </head> 
  
  <body>
@@ -58,7 +63,7 @@ p, h1 {
     </div>
   </fieldset>
  
-  <button type="submit" class="btn btn-primary"  value="submit">Submit</button>
+  <button type="submit" class="btn btn-primary"  value="submit" id="submitForm">Submit</button>
 </form>
   </div>
  
