@@ -12,9 +12,6 @@
 p, h1 {
    margin: 15px;
 }
-  td {
-     padding:7px;
- }
 </style>
  <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="AWfsxJBBFUJqNJRvCblWfPUKcHzYj4Xh";;analytics.SNIPPET_VERSION="4.15.3";
@@ -30,31 +27,38 @@ p, h1 {
 <p>Enter your contact information if you would like to receive alerts about the best sneakers as soon as they drop.</p>
 <!--Location for users to enter their information to receive the sneakerhead newsletter-->
  <div style="text-align: center"><img height="30%" width="30%" src="https://streetsense.co.in/wp-content/uploads/2022/04/air-jordan-1-chicago.jpg"> </div>
-<form name="sneakersignup" onsubmit="identify(event)">
-<br> <br>
- <table>
-  <tr><td>Full Name:</td><td> <input name="fullname" required="" size="60" type="text"/> </td>
-  </tr>
-  <tr><td>Email Address:</td><td><input name="email" required="" size="60" type="email"/> </td>
-   </tr>
-  <tr><td><label for="shoeType">Preferred Shoe</label></td><td>
- <select id="shoeType" name="shoeType">
+
+  <form name="sneakersignup" onsubmit="identify(event)">
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
+    <div class="col-sm-10">
+      <input name="fullname" required="" size="60" type="text"  class="form-control" id="inputFullName"/>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email Address</label>
+    <div class="col-sm-10">
+      <input name="email" required="" size="60" type="email" class="form-control" id="inputEmailAddress"/> 
+    </div>
+  </div>
+
+  <fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0">Preferred Shoe</legend>
+    <div class="col-sm-10">
+     
+      <selectclass="form-select"  id="shoeType" name="shoeType">
      <option value="Tennis">Tennis</option>
      <option value="Pickleball">Pickleball</option>
      <option value="Golf">Golf</option>
    <option value="Running">Running</option>
    <option value="Cross Trainers">Cross Trainers</option>
-
- </select>
-   </td>
-  </tr>
-<tr>
- <td>
- <input name="submit" type="submit" value="submit"/>
- </td>
-  </tr>
- </table>
- </form>
+       </select>
+    </div>
+  </fieldset>
+ 
+  <button type="submit" class="btn btn-primary"  value="submit">Sign in</button>
+</form>
+ 
  
 <script type="text/javascript">
  function identify(e){
