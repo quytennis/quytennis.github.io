@@ -105,15 +105,18 @@ p, h1 {
    var form = e.target;
    var email = form["email"].value;
    var fullname = form["fullname"].value;
+   var phone = form["phone"].value;
    var shoeType = form["shoeType"].value;
    var user = {
      email: email,
-     name: fullname
+     name: fullname,
+     phone: phone
    };
  // Identify call
      analytics.identify('6789', {
        email: email,
        name: fullname,
+       phone: phone,
        shoeType: shoeType
      });
   //  Sign-up Track call
